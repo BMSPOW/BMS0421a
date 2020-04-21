@@ -6,8 +6,6 @@
     "dependencies": {
         "core": "*",
         "cbit_IR":  "github:BMSPOW/BMS-IR0415e"
-	
-
     },
     "files": [
         "README.md",
