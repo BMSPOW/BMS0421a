@@ -5,7 +5,10 @@
     "license": "MIT",
     "dependencies": {
         "core": "*",
+        "neopixel": "github:microsoft/pxt-neopixel#v0.3.10",
         "cbit_IR":  "github:BMSPOW/BMS-IR0415e"
+	
+
     },
     "files": [
         "README.md",

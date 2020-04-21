@@ -2,7 +2,7 @@
 R
 modified from liusen
 load dependency
-"BMS-BCar": "file:../BMS0421c"
+"BMS-BCar": "file:../BMS20200414"
 */
 
 
@@ -531,6 +531,19 @@ namespace BMS_BCAR {
         setPwm(1, 0, G);
         setPwm(2, 0, B);
 
+    }
+
+    //% blockId=cbit_RGB_Car_Program block="3-RGB-LED"
+    //% weight=99
+    //% blockGap=10
+    //% color="#C814B8"
+    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
+    export function RGB_Car_Program(): neopixel.Strip {
+         
+        if (!yahStrip) {
+            yahStrip = neopixel.create(DigitalPin.P16, 3, NeoPixelMode.RGB);
+        }
+        return yahStrip;  
     }
 
 
