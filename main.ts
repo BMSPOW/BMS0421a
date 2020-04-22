@@ -2,7 +2,7 @@
 R
 modified from liusen
 load dependency
-"BMS-BCar": "file:../BMS20200414"
+"BMS-BCar": "file:../BMS20200422"
 */
 
 
@@ -446,6 +446,9 @@ namespace BMS_BCAR {
 
 
 
+
+/*
+
     /**
      * *****************************************************************
      * @param index
@@ -508,6 +511,13 @@ namespace BMS_BCAR {
             }
         }
     }
+
+*/
+
+
+
+/*
+
     //% blockId=RGB_Car_Big block="HeadLight|Red %value1|Green %value2|Blue %value3"
     //% weight=100
     //% blockGap=10
@@ -533,6 +543,27 @@ namespace BMS_BCAR {
 
     }
 
+
+*/
+
+
+/*
+
+    //% blockId=cbit_RGB_Car_Program block="3-RGB-LED"
+    //% weight=99
+    //% blockGap=10
+    //% color="#C814B8"
+    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
+    export function RGB_Car_Program(): neopixel.Strip {
+         
+        if (!yahStrip) {
+            yahStrip = neopixel.create(DigitalPin.P16, 3, NeoPixelMode.RGB);
+        }
+        return yahStrip;  
+    }
+
+
+*/
 
 
     //% blockId=cbit_ultrasonic_car block="Ultrasonic(cm)"
