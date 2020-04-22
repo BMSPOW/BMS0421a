@@ -62,8 +62,8 @@ namespace BMS_BCAR {
     const PRESCALE = 0xFE
 
     let initialized = false
-    let yahStrip: neopixel.Strip;
-
+ /*   let yahStrip: neopixel.Strip;
+*/
     export enum enColor {
 
         //% blockId="OFF" block="OFF"
@@ -532,6 +532,8 @@ namespace BMS_BCAR {
         setPwm(1, 0, G);
         setPwm(2, 0, B);
     }
+
+
 
 /*
     //% blockId=cbit_RGB_Car_Program block="3-RGB-LED"
