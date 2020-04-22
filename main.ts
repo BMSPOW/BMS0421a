@@ -33,12 +33,9 @@ namespace BMS_BUZZER {
 
         pins.setPull(pin, PinPullMode.PullNone);
         pins.digitalWritePin(pin, value);
-
     }
 
 }
-
-
 
 
 
@@ -85,8 +82,8 @@ namespace BMS_BCAR {
         Pinkish,
         //% blockId="Green" block="Yellow"
         Yellow,
-
     }
+
     export enum enMusic {
 
         dadadum = 0,
@@ -111,6 +108,7 @@ namespace BMS_BCAR {
         power_up,
         power_down
     }
+
     export enum enPos {
 
         //% blockId="LeftState" block="Left"
@@ -132,7 +130,6 @@ namespace BMS_BCAR {
         OBSTACLE = 0,
         //% blockId="NOOBSTACLE" block="non-Obstacle"
         NOOBSTACLE = 1
-
     }
 
     
@@ -142,6 +139,7 @@ namespace BMS_BCAR {
         S2,
         S3
     }
+
     export enum CarState {
         //% blockId="Car_Run" block="Forward"
         Car_Run = 1,
@@ -158,6 +156,7 @@ namespace BMS_BCAR {
         //% blockId="Car_SpinRight" block="SpinRight"
         Car_SpinRight = 7         
     }
+
     export enum AloneState {
         //% blockId="Right_Z_Motor" block="Right_Fwd"
         Right_Z_Motor = 1,
@@ -508,6 +507,8 @@ namespace BMS_BCAR {
             }
         }
     }
+
+
     //% blockId=RGB_Car_Big block="HeadLight|Red %value1|Green %value2|Blue %value3"
     //% weight=100
     //% blockGap=10
@@ -530,7 +531,6 @@ namespace BMS_BCAR {
         setPwm(0, 0, R);
         setPwm(1, 0, G);
         setPwm(2, 0, B);
-
     }
 
     //% blockId=cbit_RGB_Car_Program block="3-RGB-LED"
@@ -567,6 +567,7 @@ namespace BMS_BCAR {
         return d / 58;
     }
 
+
     //% blockId=Music_Car block="Play-Music|%index"
     //% weight=97
     //% blockGap=10
@@ -596,6 +597,8 @@ namespace BMS_BCAR {
             case enMusic.power_down: music.beginMelody(music.builtInMelody(Melodies.PowerDown), MelodyOptions.Once); break;
         }
     }
+
+
     //% blockId=Servo_Car block="Servo|Motor %num|Angle %value"
     //% weight=96
     //% blockGap=10
@@ -610,6 +613,7 @@ namespace BMS_BCAR {
         setPwm(num + 2, 0, pwm);
 
     }
+
 
     //% blockId=Avoid_Sensor block="Obstacle Sensor|Condition %value"
     //% weight=95
@@ -651,6 +655,9 @@ namespace BMS_BCAR {
         return temp;
 
     }
+
+
+
     //% blockId=Line_Sensor block="Line Tracking |Sensor %direct|Detect %value"
     //% weight=94
     //% blockGap=10
@@ -696,6 +703,9 @@ namespace BMS_BCAR {
         return temp;
 
     }
+
+
+
     //% blockId=CarCtrl block="Operation|%index"
     //% weight=93
     //% blockGap=10
@@ -712,6 +722,9 @@ namespace BMS_BCAR {
             case CarState.Car_SpinRight: Car_spinright(255); break;
         }
     }
+
+
+
     //% blockId=CarCtrlSpeed block="Operation|%index|Speed %speed"
     //% weight=92
     //% blockGap=10
@@ -729,6 +742,9 @@ namespace BMS_BCAR {
             case CarState.Car_SpinRight: Car_spinright(speed); break;
         }
     }
+
+
+
     //% blockId=MotorCtrlSpeed block="Motor|%index|Speed %speed"
     //% weight=91
     //% blockGap=10
@@ -743,4 +759,7 @@ namespace BMS_BCAR {
             case AloneState.Left_F_Motor: Left_F_run(speed); break;
         }
     }    
+
+
+
 }
