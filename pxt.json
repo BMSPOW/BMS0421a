@@ -5,7 +5,7 @@
     "license": "MIT",
     "dependencies": {
         "core": "*",
-        "cbit_IR":  "github:BMSPOW/BMS-IR0415e"
+        "cbit_IR":  "github:BMSPOW/BMS-IR0415c"
 	
 
     },
